@@ -139,7 +139,7 @@ void printdate(event evt[], char *argv[], int size){
     date d_e;
     sscanf(temp, "%d/%d/%d", &d_e.year, &d_e.month, &d_e.day);
     printf("\n%d",size);
-    event temp_evt[MAX_EVENTS] = evt;
+    event temp_evt[MAX_EVENTS];
     event *temp_evt_p = &temp_evt[0];
     for (int i = 0; i<size; i++) {
         if ((compare_date(evt[i].dt, d_s) == 1) || (compare_date(evt[i].dt, d_s) == 0)) {
