@@ -132,7 +132,7 @@ void final_event(event evt[], char *argv[], int size, event final_evt[], int *p)
         if ((compare_date(evt[i].dt, d_s) == 1) || (compare_date(evt[i].dt, d_s) == 0)) {
             if ((compare_date(evt[i].dt, d_e) == -1) || (compare_date(evt[i].dt, d_e) == 0)) {
                 *final_evt_p = evt[i];
-                (*p)++;
+                *p = *p +1;
                 final_evt_p++;
             }
         }
@@ -207,7 +207,7 @@ int compare_time(char time1[], char time2[]) {
 
 void convert_date(date dt) {
     if (dt.month == 1) {
-        printf("%d January, %d\n", dt.day, dt.year);
+        printf("January %d, %d\n", dt.day, dt.year);
     }
     if (dt.month == 2) {
         printf("%d Febuary, %d\n", dt.day, dt.year);
