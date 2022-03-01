@@ -32,8 +32,8 @@ display_hex_digit:
 	lb $s1, 0($s0)
 	
 	la $s0, 0xffff0010
-	add $s0, $a0, $a1
-	sb $a1, 0($s0)
+	add $s0, $s0, $a1
+	sb $s1, 0($s0)
 	
 	lw $ra, 8($sp)
 	lw $s0, 4($sp)
