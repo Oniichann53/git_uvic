@@ -199,7 +199,6 @@ def convert_date_formal(event):
 def final_list(event_list, date_s, date_e):
     temp = []
     for i in range(len(event_list)):
-        print(i)
         date = convert_datetime_hour(event_list[i])
         if date >= date_s and date <= date_e:
                 temp.append(event_list[i])
@@ -259,51 +258,49 @@ def convert_event(event, cir_list):
 
 def output(event_list, cir_list):
     file = open("output.yaml", "w")
-    file.write("events:\n")
-    date_str = convert_date_str(event_list[0])
-    file.write(f"  - {date_str}:\n")
-    id_list = convert_event(event_list[0], cir_list)
-    file.write(f"    - id: {id_list[0]}\n")
-    file.write(f"      description: {id_list[1]}\n")
-    file.write(f"      circuit: {id_list[2]}\n")
-    file.write(f"      location: {id_list[3]}\n")
-    file.write(f"      when: {id_list[4]}\n")
-    broadcaster = event_list[0]["broadcaster"]
-    file.write(f"      broadcasters:\n")
-    for i in range(len(broadcaster)):
-        file.write(f"        - {broadcaster[i]}\n")
-        if len(event_list) > 1:
-             print("\n")
-    for i in range(1,(len(event_list))):
-        if convert_datetime(event_list[i]) == convert_datetime(event_list[i-1]):
-            id_list = convert_event(event_list[i], cir_list)
-            file.write(f"    - id: {id_list[0]}\n")
-            file.write(f"      description: {id_list[1]}\n")
-            file.write(f"      circuit: {id_list[2]}\n")
-            file.write(f"      location: {id_list[3]}\n")
-            file.write(f"      when: {id_list[4]}\n")
-            broadcaster = event_list[0]["broadcaster"]
-            file.write(f"      broadcasters:\n")
-            for i in range(len(broadcaster)):
-                file.write(f"        - {broadcaster[i]}")
-                if i != len(event_list):
-                    print("\n")
-        else:
-            date_str = convert_date_str(event_list[0])
-            file.write(f"  - {date_str}:\n")
-            id_list = convert_event(event_list[i], cir_list)
-            file.write(f"    - id: {id_list[0]}\n")
-            file.write(f"      description: {id_list[1]}\n")
-            file.write(f"      circuit: {id_list[2]}\n")
-            file.write(f"      location: {id_list[3]}\n")
-            file.write(f"      when: {id_list[4]}\n")
-            broadcaster = event_list[0]["broadcaster"]
-            file.write(f"      broadcasters:\n")
-            for i in range(len(broadcaster)):
-                file.write(f"        - {broadcaster[i]}")
-                if i != len(event_list):
-                    print("\n")
-    
+    file.write("events:")
+    if len(event_list) == 0:
+        file.close()
+    else:
+        date_str = convert_date_str(event_list[0])
+        file.write(f"\n  - {date_str}:\n")
+        id_list = convert_event(event_list[0], cir_list)
+        file.write(f"    - id: {id_list[0]}\n")
+        file.write(f"      description: {id_list[1]}\n")
+        file.write(f"      circuit: {id_list[2]}\n")
+        file.write(f"      location: {id_list[3]}\n")
+        file.write(f"      when: {id_list[4]}\n")
+        broadcaster = event_list[0]["broadcaster"]
+        file.write(f"      broadcasters:")
+        for i in range(len(broadcaster)):
+            file.write(f"\n        - {broadcaster[i]}")
+        if len(event_list) != 1:
+            for i in range(1,(len(event_list))):
+                if convert_datetime(event_list[i]) == convert_datetime(event_list[i-1]):
+                    id_list = convert_event(event_list[i], cir_list)
+                    file.write(f"\n    - id: {id_list[0]}\n")
+                    file.write(f"      description: {id_list[1]}\n")
+                    file.write(f"      circuit: {id_list[2]}\n")
+                    file.write(f"      location: {id_list[3]}\n")
+                    file.write(f"      when: {id_list[4]}\n")
+                    broadcaster = event_list[i]["broadcaster"]
+                    file.write(f"      broadcasters:")
+                    for i in range(len(broadcaster)):
+                        file.write(f"\n        - {broadcaster[i]}")
+                else:
+                    date_str = convert_date_str(event_list[i])
+                    file.write(f"\n  - {date_str}:\n")
+                    id_list = convert_event(event_list[i], cir_list)
+                    file.write(f"    - id: {id_list[0]}\n")
+                    file.write(f"      description: {id_list[1]}\n")
+                    file.write(f"      circuit: {id_list[2]}\n")
+                    file.write(f"      location: {id_list[3]}\n")
+                    file.write(f"      when: {id_list[4]}\n")
+                    broadcaster = event_list[i]["broadcaster"]
+                    file.write(f"      broadcasters:")
+                    for i in range(len(broadcaster)):
+                        file.write(f"\n        - {broadcaster[i]}")
+            file.close()
     
 
 
