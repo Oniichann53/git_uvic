@@ -1,0 +1,10 @@
+events:
+  - 10-03-2022:
+    - id: EV03
+      description: F1 2022 Pre-Season Testing Day 4 - Session 1
+      circuit: Bahrain International Circuit (clockwise)
+      location: Sakhir, Bahrain
+      when: 08:00 AM - 11:00 AM Thursday, March 10, 2022 (GMT+3)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro

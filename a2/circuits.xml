@@ -1,0 +1,44 @@
+<circuits>
+    <circuit>
+        <id>CI01</id>
+        <name>Circuit de Barcelona-Catalunya</name>
+        <location>Montmelo, Spain</location>
+        <timezone>GMT+1</timezone>
+        <direction>clockwise</direction>
+    </circuit>
+    <circuit>
+        <id>CI02</id>
+        <name>Bahrain International Circuit</name>
+        <location>Sakhir, Bahrain</location>
+        <timezone>GMT+3</timezone>
+        <direction>clockwise</direction>
+    </circuit>
+    <circuit>
+        <id>CI03</id>
+        <name>Autodromo Jose Carlos Pace</name>
+        <location>Sao Paulo, Brazil</location>
+        <timezone>GMT-3</timezone>
+        <direction>anti-clockwise</direction>
+    </circuit>
+    <circuit>
+        <id>CI04</id>
+        <name>Circuit Gilles-Villeneuve</name>
+        <location>Montreal, Canada</location>
+        <timezone>GMT-5</timezone>
+        <direction>clockwise</direction>
+    </circuit>
+    <circuit>
+        <id>CI05</id>
+        <name>Circuit of the Americas</name>
+        <location>Austin, United States</location>
+        <timezone>GMT-6</timezone>
+        <direction>anti-clockwise</direction>
+    </circuit>
+    <circuit>
+        <id>CI06</id>
+        <name>Autodromo Hermanos Rodriguez</name>
+        <location>Mexico City, Mexico</location>
+        <timezone>GMT-6</timezone>
+        <direction>clockwise</direction>
+    </circuit>
+</circuits>

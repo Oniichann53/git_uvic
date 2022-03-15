@@ -1,0 +1,35 @@
+<calendar>
+    <event>
+        <id>EV01</id>
+        <description>F1 2022 Pre-Season Testing Day 1 - Session 1</description>
+        <location>CI01</location>
+        <day>23</day>
+        <month>02</month>
+        <year>2022</year>
+        <start>08:00</start>
+        <end>11:00</end>
+        <broadcaster>BR01</broadcaster>
+    </event>
+    <event>
+        <id>EV02</id>
+        <description>F1 2022 Pre-Season Testing Day 1 - Session 2</description>
+        <location>CI01</location>
+        <day>23</day>
+        <month>02</month>
+        <broadcaster>BR01</broadcaster>
+        <year>2022</year>
+        <start>12:00</start>
+        <end>15:00</end>
+    </event>
+    <event>
+        <broadcaster>BR01,BR02</broadcaster>
+        <id>EV03</id>
+        <description>F1 2022 Pre-Season Testing Day 4 - Session 1</description>
+        <location>CI02</location>
+        <day>10</day>
+        <month>03</month>
+        <year>2022</year>
+        <start>08:00</start>
+        <end>11:00</end>
+    </event>
+</calendar>

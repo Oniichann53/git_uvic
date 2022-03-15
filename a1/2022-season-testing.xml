@@ -1,0 +1,35 @@
+<calendar>
+    <event>
+        <description>F1 2022 Pre-Season Testing Day 1 - Session 1</description>
+        <timezone>GMT+1</timezone>
+        <location>Barcelona, Spain</location>
+        <day>23</day>
+        <month>02</month>
+        <year>2022</year>
+        <dweek>Wednesday</dweek>
+        <start>08:00</start>
+        <end>11:00</end>
+    </event>
+    <event>
+        <description>F1 2022 Pre-Season Testing Day 1 - Session 2</description>
+        <timezone>GMT+1</timezone>
+        <location>Barcelona, Spain</location>
+        <day>23</day>
+        <month>02</month>
+        <year>2022</year>
+        <dweek>Wednesday</dweek>
+        <start>12:00</start>
+        <end>15:00</end>
+    </event>
+    <event>
+        <description>F1 2022 Pre-Season Testing Day 4 - Session 1</description>
+        <timezone>GMT+3</timezone>
+        <location>Sakhir, Bahrain</location>
+        <day>10</day>
+        <month>03</month>
+        <year>2022</year>
+        <dweek>Thursday</dweek>
+        <start>08:00</start>
+        <end>11:00</end>
+    </event>
+</calendar>

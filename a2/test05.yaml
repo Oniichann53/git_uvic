@@ -1,0 +1,93 @@
+events:
+  - 18-06-2022:
+    - id: EVM1
+      description: FORMULA 1 GRAND PRIX DU CANADA 2022 - Practice 3
+      circuit: Circuit Gilles-Villeneuve (clockwise)
+      location: Montreal, Canada
+      when: 09:30 AM - 10:30 AM Saturday, June 18, 2022 (GMT-5)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+    - id: EVM2
+      description: FORMULA 1 GRAND PRIX DU CANADA 2022 - Qualifying
+      circuit: Circuit Gilles-Villeneuve (clockwise)
+      location: Montreal, Canada
+      when: 11:30 AM - 12:30 PM Saturday, June 18, 2022 (GMT-5)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+        - TSN Direct
+  - 19-06-2022:
+    - id: EVM3
+      description: FORMULA 1 GRAND PRIX DU CANADA 2022 - Race
+      circuit: Circuit Gilles-Villeneuve (clockwise)
+      location: Montreal, Canada
+      when: 01:30 PM - 03:30 PM Sunday, June 19, 2022 (GMT-5)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+        - TSN Direct
+  - 22-10-2022:
+    - id: EVA1
+      description: FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022 - Practice 3
+      circuit: Circuit of the Americas (anti-clockwise)
+      location: Austin, United States
+      when: 10:00 AM - 11:00 AM Saturday, October 22, 2022 (GMT-6)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+    - id: EVA2
+      description: FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022 - Qualifying
+      circuit: Circuit of the Americas (anti-clockwise)
+      location: Austin, United States
+      when: 01:00 PM - 02:00 PM Saturday, October 22, 2022 (GMT-6)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+  - 23-10-2022:
+    - id: EVA3
+      description: FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022 - Race
+      circuit: Circuit of the Americas (anti-clockwise)
+      location: Austin, United States
+      when: 03:00 PM - 05:00 PM Sunday, October 23, 2022 (GMT-6)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+        - TSN Direct
+  - 30-10-2022:
+    - id: EVX1
+      description: FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MEXICO 2022 - Race
+      circuit: Autodromo Hermanos Rodriguez (clockwise)
+      location: Mexico City, Mexico
+      when: 02:00 PM - 04:00 PM Sunday, October 30, 2022 (GMT-6)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+        - TSN Direct
+  - 12-11-2022:
+    - id: EVS1
+      description: FORMULA 1 GRANDE PREMIO DE SAO PAULO 2022 - Practice 3
+      circuit: Autodromo Jose Carlos Pace (anti-clockwise)
+      location: Sao Paulo, Brazil
+      when: 09:00 AM - 10:00 AM Saturday, November 12, 2022 (GMT-3)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+    - id: EVS2
+      description: FORMULA 1 GRANDE PREMIO DE SAO PAULO 2022 - Qualifying
+      circuit: Autodromo Jose Carlos Pace (anti-clockwise)
+      location: Sao Paulo, Brazil
+      when: 11:00 AM - 12:00 PM Saturday, November 12, 2022 (GMT-3)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+  - 13-11-2022:
+    - id: EVS3
+      description: FORMULA 1 GRANDE PREMIO DE SAO PAULO 2022 - Race
+      circuit: Autodromo Jose Carlos Pace (anti-clockwise)
+      location: Sao Paulo, Brazil
+      when: 01:00 PM - 03:00 PM Sunday, November 13, 2022 (GMT-3)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+        - TSN Direct

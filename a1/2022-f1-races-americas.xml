@@ -1,0 +1,123 @@
+<calendar>
+    <event>
+        <description>FORMULA 1 GRANDE PREMIO DE SAO PAULO 2022 - Practice 3</description>
+        <timezone>GMT-3</timezone>
+        <location>Sao Paulo, Brazil</location>
+        <day>12</day>
+        <month>11</month>
+        <year>2022</year>
+        <dweek>Saturday</dweek> 
+        <start>09:00</start>
+        <end>10:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 GRANDE PREMIO DE SAO PAULO 2022 - Qualifying</description>
+        <timezone>GMT-3</timezone>
+        <location>Sao Paulo, Brazil</location>
+        <day>12</day>
+        <month>11</month>
+        <year>2022</year>
+        <dweek>Saturday</dweek>
+        <start>11:00</start>
+        <end>12:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 GRANDE PREMIO DE SAO PAULO 2022 - Race</description>
+        <timezone>GMT-3</timezone>
+        <location>Sao Paulo, Brazil</location>
+        <day>13</day>
+        <month>11</month>
+        <year>2022</year>
+        <dweek>Sunday</dweek>
+        <start>13:00</start>
+        <end>15:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022 - Practice 3</description>
+        <timezone>GMT-6</timezone>
+        <location>Austin, USA</location>
+        <day>22</day>
+        <month>10</month>
+        <year>2022</year>
+        <dweek>Saturday</dweek>
+        <start>10:00</start>
+        <end>11:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022 - Qualifying</description>
+        <timezone>GMT-6</timezone>
+        <location>Austin, USA</location>
+        <day>22</day>
+        <month>10</month>
+        <year>2022</year>
+        <dweek>Saturday</dweek>
+        <start>13:00</start>
+        <end>14:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022 - Race</description>
+        <timezone>GMT-6</timezone>
+        <location>Austin, USA</location>
+        <day>23</day>
+        <month>10</month>
+        <year>2022</year>
+        <dweek>Sunday</dweek>
+        <start>15:00</start>
+        <end>17:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MEXICO 2022 - Qualifying</description>
+        <timezone>GMT-6</timezone>
+        <location>Mexico City, Mexico</location>
+        <day>29</day>
+        <month>10</month>
+        <year>2022</year>
+        <dweek>Saturday</dweek>
+        <start>13:00</start>
+        <end>14:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MEXICO 2022 - Race</description>
+        <timezone>GMT-6</timezone>
+        <location>Mexico City, Mexico</location>
+        <day>30</day>
+        <month>10</month>
+        <year>2022</year>
+        <dweek>Sunday</dweek>
+        <start>14:00</start>
+        <end>16:00</end>
+    </event>
+    <event>
+        <description>FORMULA 1 GRAND PRIX DU CANADA 2022 - Qualifying</description>
+        <timezone>GMT-5</timezone>
+        <location>Montreal, Canada</location>
+        <day>18</day>
+        <month>06</month>
+        <year>2022</year>
+        <dweek>Saturday</dweek>
+        <start>11:30</start>
+        <end>12:30</end>
+    </event>
+    <event>
+        <description>FORMULA 1 GRAND PRIX DU CANADA 2022 - Practice 3</description>
+        <timezone>GMT-5</timezone>
+        <location>Montreal, Canada</location>
+        <day>18</day>
+        <month>06</month>
+        <year>2022</year>
+        <dweek>Saturday</dweek> 
+        <start>09:30</start>
+        <end>10:30</end>
+    </event>
+    <event>
+        <description>FORMULA 1 GRAND PRIX DU CANADA 2022 - Race</description>
+        <timezone>GMT-5</timezone>
+        <location>Montreal, Canada</location>
+        <day>19</day>
+        <month>06</month>
+        <year>2022</year>
+        <dweek>Sunday</dweek>
+        <start>13:30</start>
+        <end>15:30</end>
+    </event>
+</calendar>

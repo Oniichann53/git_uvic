@@ -1,0 +1,29 @@
+events:
+  - 18-06-2022:
+    - id: EVM1
+      description: FORMULA 1 GRAND PRIX DU CANADA 2022 - Practice 3
+      circuit: Circuit Gilles-Villeneuve (clockwise)
+      location: Montreal, Canada
+      when: 09:30 AM - 10:30 AM Saturday, June 18, 2022 (GMT-5)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+    - id: EVM2
+      description: FORMULA 1 GRAND PRIX DU CANADA 2022 - Qualifying
+      circuit: Circuit Gilles-Villeneuve (clockwise)
+      location: Montreal, Canada
+      when: 11:30 AM - 12:30 PM Saturday, June 18, 2022 (GMT-5)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+        - TSN Direct
+  - 19-06-2022:
+    - id: EVM3
+      description: FORMULA 1 GRAND PRIX DU CANADA 2022 - Race
+      circuit: Circuit Gilles-Villeneuve (clockwise)
+      location: Montreal, Canada
+      when: 01:30 PM - 03:30 PM Sunday, June 19, 2022 (GMT-5)
+      broadcasters:
+        - F1 TV Access
+        - F1 TV Pro
+        - TSN Direct

@@ -1,0 +1,17 @@
+<broadcasters>
+    <broadcaster>
+        <id>BR01</id>
+        <name>F1 TV Access</name>
+        <cost>36.99 CAD/year</cost>
+    </broadcaster>
+    <broadcaster>
+        <id>BR02</id>
+        <name>F1 TV Pro</name>
+        <cost>79.99 CAD/year</cost>
+    </broadcaster>
+    <broadcaster>
+        <id>BR03</id>
+        <name>TSN Direct</name>
+        <cost>199.99 CAD/year</cost>
+    </broadcaster>
+</broadcasters>
