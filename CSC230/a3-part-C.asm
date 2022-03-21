@@ -52,6 +52,32 @@ main:
 # $a2: colour of box
 
 draw_bitmap_box:
+	addi $sp, $sp, -12
+	sw $ra, 0($sp)
+	sw $s0, 4($sp)
+	sw $s1, 8($sp)
+	addi $s0, $zero, 0
+	addi $s1, $zero, 0
+main_loop:
+	jal set_pixel
+	addi $a0, $a0, 1
+	addi $s0, $s0, 1
+	bne $s0, 4, main_loop
+	bne $s1, 3, next_col
+	beq $zero, $zero, end
+
+next_col:
+	sub $a0, $a0, 4
+	addi $s0, $zero, 0
+	addi $a1, $a1, 1
+	addi $s1, $s1, 1
+	beq $zero, $zero, main_loop
+
+end:
+	lw $ra, 0($sp)
+	lw $s0, 4($sp)
+	lw $s1, 8($sp)
+	addi $sp, $sp, 12
 	jr $ra
 
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

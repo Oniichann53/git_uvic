@@ -48,8 +48,15 @@ key_count:
 	beq $zero, $zero, reset
 
 print:
-	la $a0, KEYBOARD_COUNTS
-		
+	addi $a0, $s4, 0
+	addi $v0, $zero, 1
+	syscall
+	
+	la $a0, NEWLINE
+	addi $v0, $zero, 4
+	syscall
+	
+	beq $zero, $zero, reset
 
 reset:
 	addi $s1, $zero, 0
