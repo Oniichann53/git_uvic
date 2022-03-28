@@ -19,16 +19,10 @@
     * Test: `./tester.py 3`
 
 * Test 4
-    * Input: `f1-podcast.ics`
+    * Input: `2022-f1-races-americas.ics`
     * Expected output: `test04.txt`
-    * Command: `./process_cal3 --start=2022/3/15 --end=2022/12/1 --file=f1-podcast.ics`
+    * Command: `./process_cal3 --start=2022/6/1 --end=2022/11/30 --file=2022-f1-races-americas.ics`
     * Test: `./tester.py 4`
 
-* Test 5
-    * Input: `2022-f1-races-americas.ics`
-    * Expected output: `test05.txt`
-    * Command: `./process_cal3 --start=2022/6/1 --end=2022/11/30 --file=2022-f1-races-americas.ics`
-    * Test: `./tester.py 5`
-
-* All 5 Tests
+* All 4 Tests
     * Test: `./tester.py`

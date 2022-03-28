@@ -51,10 +51,33 @@ void print_list(node_t *, struct tm *, struct tm *);
  */
 event_t *new_event(event_t *event)
 {
-    // TODO: Complete the function.
-    printf("a");
+    day *wkst = (day*)emalloc(sizeof(day));
+    day *byday = (day*)emalloc(sizeof(day));
+    frequency *freq = (frequency*)emalloc(sizeof(frequency));
+    char *until = (char*)emalloc(sizeof(DATE_LEN));
+    repetition_t *repetition = (repetition_t*)emalloc(REPETITION_LEN);
+    *wkst = event->repetition.wkst;
+    *byday = event->repetition.byday;
+    *freq = event->repetition.freq;
+    strcpy(until, event->repetition.until);
+    repetition->wkst = *wkst;
+    repetition->byday = *byday;
+    repetition->freq = *freq;
+    strcpy(repetition->until, until);
+    char *description = (char*)emalloc(SUMMARY_LEN);
+    char *start_date = (char*)emalloc(DATE_LEN);
+    char *end_date = (char*)emalloc(DATE_LEN);
+    char *location = (char*)emalloc(LOCATION_LEN);
+    strcpy(description, event->description);
+    strcpy(start_date, event->start_date);
+    strcpy(end_date, event->end_date);
+    strcpy(location, event->location);
     event_t *temp = (event_t*)emalloc(sizeof(event_t));
-    temp = event;
+    temp->repetition = *repetition;
+    strcpy(temp->description, description);
+    strcpy(temp->start_date, start_date);
+    strcpy(temp->end_date, end_date);
+    strcpy(temp->location, location);
     return temp;
 }
 
@@ -74,7 +97,12 @@ event_t *new_event(event_t *event)
  */
 void print_formatted_date(char *date)
 {
-    printf("%s", date);
+    printf("%s\n", date);
+    int length = strlen(date);
+    for (int i = 0; i < length; i++) {
+        printf("-");
+    }
+    printf("\n");
 }
 
 /**
@@ -94,8 +122,7 @@ void print_formatted_date(char *date)
 
 void print_formatted_event(char *start_time, char *end_time, char *description, char *location)
 {
-    // TODO: Complete the function.
-
+    printf("%s to %s: %s {{%s}}\n", start_time, end_time, description, location);
 }
 
 /**
@@ -452,7 +479,7 @@ void print_list(node_t *list, struct tm *from_date, struct tm *to_date)
                 if (first_event)
                     first_event = 0;
                 else
-                    printf("\n");
+                printf("\n");
                 strcpy(current_date, curr->val->start_date);
                 // Format the date and time
                 format_date(date, curr->val->start_date, MAX_LINE_LEN, 1);

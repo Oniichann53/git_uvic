@@ -32,7 +32,7 @@ node_t *new_node(event_t *val)
     assert(val != NULL);
     node_t *temp = (node_t*)emalloc(sizeof(node_t));
     temp->val = val;
-    // TODO: Complete the function.
+    temp->next = NULL;
     return temp;
 }
 
@@ -53,7 +53,6 @@ node_t *new_node(event_t *val)
  */
 node_t *add_inorder(node_t *list, node_t *new)
 {
-    // TODO: Complete the function.
     if (list == NULL) {
         new->next = NULL;
         return new;
@@ -76,7 +75,9 @@ node_t *add_inorder(node_t *list, node_t *new)
             return list;
         }
     }
-    return list;
+    return add_end(list, new);
+
+    
 }
 
 /**

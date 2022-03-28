@@ -159,8 +159,7 @@ def main():
         ('./process_cal3 --start=2022/1/1 --end=2022/1/30 --file=aston-martin-release.ics', 'test01.txt'),
         ('./process_cal3 --start=2022/2/10 --end=2022/2/10 --file=aston-martin-release.ics', 'test02.txt'),
         ('./process_cal3 --start=2022/1/1 --end=2022/3/15 --file=2022-season-testing.ics', 'test03.txt'),
-        ('./process_cal3 --start=2022/3/15 --end=2022/12/1 --file=f1-podcast.ics', 'test04.txt'),
-        ('./process_cal3 --start=2022/6/1 --end=2022/11/30 --file=2022-f1-races-americas.ics', 'test05.txt')
+        ('./process_cal3 --start=2022/6/1 --end=2022/11/30 --file=2022-f1-races-americas.ics', 'test04.txt')
     ]
     file_to_run = 'process_cal3'
     build_folder = Path(os.getcwd())
