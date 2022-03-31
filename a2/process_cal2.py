@@ -17,33 +17,43 @@ import datetime
 
 
 def main():
-    """The main entry point for the program.
-    """
-    # Calling a dummy function to illustrate the process in Python
-    # print('Hi! from:', sys.argv[0])
+    # create an empty list of event
     event_list = []
+    # this is a mutable list that will contain all of the arguements
     argv = {"start":"", "end":"", "event_file":"", "cir_file":"", "br_file":""}
 
+    # parse all of the arguements from terminal to a list of arguement
     parse_argv(argv)
 
+    # parse the event file to create a list of dictionaries for events
     parse_event(event_list, argv["event_file"])
+    
+    # parse the broadcasters file to create a list of dictionaries for broadcasters
     broadcaster_list = parse_broadcaster(argv["br_file"])
+    
+    # parse the circuit file to create a list of dictionaries for circuit
     circuit_list = parse_circuit(argv["cir_file"])
 
+    # change all of the broadcasters id from event list to the broadcasters' name from broadcasters list
     for i in range(len(event_list)):
         convert_broadcaster(event_list[i], broadcaster_list)
     
-
+    # change all of the circuit id from event list to the circuit location from circuit list
     for i in range(len(event_list)):
         convert_circuit(event_list[i], circuit_list)
     
-
+    # sort the event from earliest date to latest date
     event_list = sort_list(event_list)
+    
+    # create the final list that contains all of the events happening in the given start and end time
     date_s = parse_date(argv["start"])
     date_e = parse_date(argv["end"])
     event_list = final_list(event_list, date_s, date_e)
+    
+    # output the required content to the output.yaml file
     output(event_list,circuit_list)
 
+# parse the content given in the arguements from terminal
 def parse_argv(argv):
     argv1 = re.split("=", sys.argv[1])
     argv2 = re.split("=", sys.argv[2])
@@ -57,6 +67,7 @@ def parse_argv(argv):
     argv["cir_file"] = argv4[1]
     argv["br_file"] = argv5[1]
 
+# parse the content in broadcaster file into a list
 def parse_broadcaster(filename):
     br_list = []
     fil_lines = []
@@ -75,6 +86,7 @@ def parse_broadcaster(filename):
     file.close()
     return br_list
 
+# parse the content in circuit file into a list
 def parse_circuit(filename):
     cir_list = []
     fil_lines = []
@@ -93,6 +105,7 @@ def parse_circuit(filename):
     file.close()
     return cir_list
 
+# parse the content in the given event file into a list of events
 def parse_event(event_list,filename):
     fil_lines = []
     with open(filename) as file:
@@ -113,6 +126,7 @@ def parse_date(date):
     date = re.split("/", date)
     return datetime.datetime(int(date[0]), int(date[1]), int(date[2]), 0, 0)
 
+# convert the broadcaster id from the event into the proper broadcaster name from the broadcaster list
 def convert_broadcaster(event, broadcaster_list):
     broadcaster_tup = re.split(",",event["broadcaster"])
     for i in range(len(broadcaster_tup)):
@@ -121,12 +135,13 @@ def convert_broadcaster(event, broadcaster_list):
                 broadcaster_tup[i] = broadcaster_list[j]["name"]
     event["broadcaster"] = broadcaster_tup
 
+# convert the circuit id location from the event into the proper circuit location name from the circuit list
 def convert_circuit(event, circuit_list):
     for i in range(len(circuit_list)):
         if event["location"] == circuit_list[i]["id"]:
             event["location"] = circuit_list[i]["location"]
      
-
+# sort the given list from earliest date to latest date
 def sort_list(event_list):
     temp = [None] * len(event_list)
     size = 0
@@ -144,6 +159,7 @@ def sort_list(event_list):
         event_list.remove(min_event)
     return temp
 
+# convert the given date in the event into datetime.datetime form to be used for comparison between dates
 def convert_datetime(event):
     start = re.split(":", event["start"])
     end = re.split(":", event["end"])
@@ -153,6 +169,7 @@ def convert_datetime(event):
     result = datetime.datetime(year, month, day)
     return result
 
+# convert the given date and time in the event into datetime.datetime form to be used for comparison between dates with given times
 def convert_datetime_hour(event):
     start = re.split(":", event["start"])
     end = re.split(":", event["end"])
@@ -164,12 +181,14 @@ def convert_datetime_hour(event):
     result = datetime.datetime(year, month, day, hour_s, minute_s)
     return result
 
+# convert the given date in the event into a string of date
 def convert_date_str(event):
     day = event["day"]
     month = event["month"]
     year = event["year"]
     return day+"-"+month+"-"+year
 
+# convert the month in the event into string month
 def convert_date_formal(event):
     if int(event["month"]) == 1:
         return "January"
@@ -196,6 +215,7 @@ def convert_date_formal(event):
     if int(event["month"]) == 12:
         return "December"
 
+# create the final list that contains all of the events in the given start and end time
 def final_list(event_list, date_s, date_e):
     temp = []
     for i in range(len(event_list)):
@@ -204,6 +224,7 @@ def final_list(event_list, date_s, date_e):
                 temp.append(event_list[i])
     return temp         
 
+# convert the all of the info in event into a list of required info
 def convert_event(event, cir_list):
     temp = []
     id = event["id"]
@@ -253,9 +274,7 @@ def convert_event(event, cir_list):
     temp.append(when)
     return temp
 
-
-
-
+# output the required output.yaml file containing the required data in YAML format
 def output(event_list, cir_list):
     file = open("output.yaml", "w")
     file.write("events:")
@@ -302,12 +321,6 @@ def output(event_list, cir_list):
                         file.write(f"\n        - {broadcaster[i]}")
             file.close()
     
-
-
-
-
-
-
 if __name__ == '__main__':
     main()
     
